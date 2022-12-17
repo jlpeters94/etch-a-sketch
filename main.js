@@ -19,14 +19,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	resetClick.addEventListener("click", function() {
 		resetBoard();
 	});
-	document.querySelector("body").addEventListener("mousedown", function(e) {
+	document.querySelector("body").addEventListener("click", function(e) {
 		if (e.target.tagName != "BUTTON") {
-			click = true;
+			click = !click;
 		}
 	});
-	document.querySelector("body").addEventListener("mouseup", function () {
-		click = false;
-	})
 })
 
 function createBoard(size) {
